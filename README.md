@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SafeStay (TravelTech)
 ### Real-Time Crisis Communication & Evacuation Routing System for Tourists
 
@@ -179,3 +180,6 @@ flowchart TD
 3. **IMD Radar & Flood Sensor Ingestion**: Real-time webhook ingestion from Indian Meteorological Department (IMD) doppler weather radars and Central Water Commission river gauge sensors for automatic polygon generation.
 4. **Airline & OTA Booking Integration**: Automatic safety pre-registration when tourists book flights or hotels in disaster-prone regions through MakeMyTrip, Booking.com, or Air India.
 5. **Diplomatic Embassy Emergency Portal**: Dedicated access for foreign consulates (US, France, UK, Germany, UAE, Japan) to monitor the safety status of their registered citizens in real time.
+=======
+# safestay
+>>>>>>> 4e44f87fb9650d8169827259e09c61f6350071a3
