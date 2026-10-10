@@ -1,0 +1,17 @@
+{
+  "short_name": "SafeStay",
+  "name": "SafeStay Crisis Communication System",
+  "icons": [
+    {
+      "src": "/shield.svg",
+      "type": "image/svg+xml",
+      "sizes": "64x64 192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#dc2626",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "description": "Real-time emergency warning, offline routing, and multilingual crisis coordination for tourists"
+}

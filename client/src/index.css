@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-charcoal: #10191A;
+  --color-charcoal-deep: #0a1011;
+  --color-dark-teal: #172728;
+  --color-muted-teal: #233839;
+  --color-border-muted: #344849;
+  --color-text-primary: #F3F5F4;
+  --color-text-muted: #c4cac8;
+  --color-text-subtle: #8e9997;
+  --color-danger: #FF5B5B;
+  --color-warning: #F3BD58;
+  --color-safe: #70D6A1;
+  --color-accent: #83D8D0;
+}
+
+@layer base {
+  body {
+    background-color: #10191A;
+    background-image: 
+      radial-gradient(ellipse 90% 40% at 50% 0%, rgba(23, 39, 40, 0.85) 0%, transparent 70%),
+      radial-gradient(circle at 100% 20%, rgba(52, 72, 73, 0.3) 0%, transparent 40%),
+      url('/atmosphere.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #F3F5F4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    min-height: 100vh;
+  }
+}
+
+/* Translucent Glass Panels inspired by editorial weather dashboard */
+.glass-panel {
+  background: rgba(23, 39, 40, 0.68);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(52, 72, 73, 0.55);
+}
+
+.glass-card {
+  background: rgba(16, 25, 26, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(52, 72, 73, 0.4);
+}
+
+.glass-card:hover {
+  border-color: rgba(131, 216, 208, 0.35);
+}
+
+.glass-subtle {
+  background: rgba(23, 39, 40, 0.4);
+  border: 1px solid rgba(52, 72, 73, 0.3);
+}
+
+.glass-pill {
+  background: rgba(52, 72, 73, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(52, 72, 73, 0.5);
+}
+
+/* Editorial Dividers */
+.thin-divider {
+  border-color: rgba(52, 72, 73, 0.45);
+}
+
+/* Ensure Leaflet maps render smoothly with dark frame */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  font-family: inherit;
+  background: #10191A !important;
+}
+
+/* Elegant dark map tile contrast adjustment */
+.leaflet-tile {
+  filter: brightness(0.85) contrast(1.15) saturate(0.85) hue-rotate(-10deg);
+}
+
+/* Leaflet dark popups */
+.leaflet-popup-content-wrapper {
+  background: #172728 !important;
+  color: #F3F5F4 !important;
+  border: 1px solid #344849 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+}
+
+.leaflet-popup-tip {
+  background: #172728 !important;
+  border: 1px solid #344849 !important;
+}
+
+/* High contrast touch buttons for emergencies */
+.btn-emergency {
+  @apply touch-manipulation active:scale-95 transition-all font-bold;
+}
+
+/* Pulsing radar effect for SOS and Danger markers */
+@keyframes radar-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 91, 91, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 16px rgba(255, 91, 91, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 91, 91, 0);
+  }
+}
+
+.radar-active {
+  animation: radar-pulse 2s infinite;
+}
+
+/* Sleek custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(16, 25, 26, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(52, 72, 73, 0.6);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(131, 216, 208, 0.5);
+}
+
+/* RTL direction support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

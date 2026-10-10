@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Deep charcoal to dark teal atmospheric foundation -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1112" />
+      <stop offset="30%" stop-color="#10191A" />
+      <stop offset="65%" stop-color="#142223" />
+      <stop offset="100%" stop-color="#172728" />
+    </linearGradient>
+
+    <!-- Misty cloud gradients -->
+    <radialGradient id="mist1" cx="30%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#344849" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#172728" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#10191A" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="mist2" cx="75%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#233839" stop-opacity="0.4" />
+      <stop offset="60%" stop-color="#142021" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#10191A" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#080d0e" stop-opacity="0.75" />
+    </radialGradient>
+
+    <!-- Rain streak pattern -->
+    <pattern id="rainPattern" width="120" height="120" patternUnits="userSpaceOnUse" patternTransform="rotate(12)">
+      <line x1="10" y1="5" x2="10" y2="45" stroke="#83D8D0" stroke-width="0.75" stroke-opacity="0.12" stroke-linecap="round" />
+      <line x1="45" y1="60" x2="45" y2="105" stroke="#F3F5F4" stroke-width="0.6" stroke-opacity="0.08" stroke-linecap="round" />
+      <line x1="80" y1="15" x2="80" y2="50" stroke="#83D8D0" stroke-width="0.8" stroke-opacity="0.1" stroke-linecap="round" />
+      <line x1="105" y1="70" x2="105" y2="115" stroke="#F3F5F4" stroke-width="0.65" stroke-opacity="0.09" stroke-linecap="round" />
+    </pattern>
+
+    <!-- Distant mountain silhouette for depth -->
+    <linearGradient id="ridgeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#172728" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#10191A" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base dark sky -->
+  <rect width="1920" height="1080" fill="url(#skyGrad)" />
+
+  <!-- Atmospheric mist clouds -->
+  <rect width="1920" height="1080" fill="url(#mist1)" />
+  <rect width="1920" height="1080" fill="url(#mist2)" />
+
+  <!-- Mountain ridge backdrop silhouette -->
+  <path d="M0,780 Q280,680 540,740 T1080,690 T1520,730 T1920,680 L1920,1080 L0,1080 Z" fill="url(#ridgeGrad)" />
+  <path d="M0,860 Q340,780 680,820 T1360,790 T1920,830 L1920,1080 L0,1080 Z" fill="#0d1415" opacity="0.7" />
+
+  <!-- Rain streaks -->
+  <rect width="1920" height="1080" fill="url(#rainPattern)" />
+
+  <!-- Vignette overlay for editorial cinematic focus -->
+  <rect width="1920" height="1080" fill="url(#vignette)" />
+</svg>
